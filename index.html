@@ -11,7 +11,7 @@
     <main>
         <header>
             <H1> Random Password Generator </H1>
-            <h3> Generate string, random, and unique passwords with the click of a button. </h3>
+            <h3> Generate strong, random, and unique passwords with the click of a button. </h3>
         </header>
         <section class="card" >
             <div class="card-header">
@@ -19,17 +19,22 @@
             </div>
             <div class="card-body">
                 <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
-                <br>
-                    <button> Generate Password </button>
+                <div id="buttonDiv">
+                    <button id="generate" class="btn"> Generate Password </button>                    
+                </div>
                 <div class="passwordControls">
                     <div class="sliderControl">
                         <input type="range" min="4" max="128" value="50" class="slider" id="range">
-                        <p id="sliderValue"> 50 </p>
+                        <label id="sliderValue"> 50 </label>
                     </div>
-                    <input type="checkbox" id="checkNumbers">
-                    <label id="checkNumberLabel"> Numbers </label>
-                    <input type="checkbox" id="checkCharacter">
-                    <label id="checkCharacterLabel"> Special Characters </label>
+                    <div>
+                        <input type="checkbox" id="checkNumbers">
+                        <label id="checkNumberLabel"> Numbers </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkCharacter">
+                        <label id="checkCharacterLabel"> Special Characters </label>
+                    </div>
                 </div>
             </div>
         </section>
