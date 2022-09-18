@@ -31,16 +31,21 @@
                 <div class="passwordControls">
                     <div class="sliderControl">
                         <label> Length </label>
-                        <input type="range" min="4" max="128" value="50" class="slider" id="range">
+                        <input type="range" min="4" max="128" value="4" class="slider" id="range">
                         <label id="sliderValue"> 50 </label>
                     </div>
                     <div>
+                        <input type="checkbox" id="checkChar">
+                        <label id="checkCarLabel"> Characters (e.g. ABcd)</label>
+
+                    </div>
+                    <div>
                         <input type="checkbox" id="checkNumbers">
-                        <label id="checkNumberLabel"> Numbers </label>
+                        <label id="checkNumberLabel"> Numbers (e.g 123) </label>
                     </div>
                     <div>
                         <input type="checkbox" id="checkCharacter">
-                        <label id="checkCharacterLabel"> Special Characters </label>
+                        <label id="checkCharacterLabel"> Special Characters (e.g !@#) </label>
                     </div>
                 </div>
             </div>
