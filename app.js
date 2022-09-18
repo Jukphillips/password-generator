@@ -5,11 +5,16 @@ let checkChar = document.getElementById('checkChar');
 let checkNumbers = document.getElementById('checkNumbers');
 let checkSpe = document.getElementById('checkSpe');
 let refresh = document.getElementById('refreshBtn');
-output.textContent = slider.value // sets default value
 let checkBoxs = document.getElementsByClassName('checkBox') // created to contain an HtmlCollection of all checkboxes 
-// Updates the slider value
+
+
+output.textContent = slider.value // sets default value
+
+
+// Updates the slider value and calls passwordGenerator function
 slider.oninput = function() {
-    output.textContent = this.value
+    output.textContent = this.value 
+    passwordGenerator();
 }; 
 
 // Test to determine how to determine wether or not a checkbox is checked
@@ -26,11 +31,6 @@ function passwordGenerator() {
     console.log(slider.value, checkChar.checked, checkNumbers.checked, checkSpe.checked)
 
 }
-
-slider.oninput( passwordGenerator )
-
-checkChar.addEventListener('click', passwordGenerator)
-
 
 
 

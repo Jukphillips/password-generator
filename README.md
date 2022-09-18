@@ -14,3 +14,6 @@ Fonts
 combo for all card fonts
 Amatic for password output
 Anton for header
+
+add userSelection option that is "" at first
+add different selections for character ABC and abc, numbers 1234, and special characters (!@#)
