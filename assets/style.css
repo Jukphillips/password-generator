@@ -31,8 +31,7 @@ header {
     font-family: 'Anton';
 }
 
-.card {
-    background-color: white;
+#card {
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -43,7 +42,8 @@ header {
     padding: 25px;
     max-width: 1000px;
     font-family: "Combo";
-}
+};
+
 
 .card-body {
     min-height: 100px;
@@ -68,7 +68,7 @@ header {
 }
 
 
-.passwordControls::before{
+#passwordControls::before{
     position: absolute;
     width: 40px;
     height: 40px;
@@ -83,7 +83,7 @@ header {
     transform: rotate(45deg);
 }
 
-.passwordControls {
+#passwordControls {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -109,7 +109,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #E21C1C;
+    background-color: #5bc0de;
 }
 
 #buttonDiv {

@@ -13,7 +13,7 @@
             <H1> Random Password Generator </H1>
             <h3> Generate strong, random, and unique passwords with the click of a button. </h3>
         </header>
-        <section class="card">
+        <section id="card">
             <div class="card-body">
                 <div class="passwordcontainer">
                 <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
@@ -28,7 +28,7 @@
                 <div id="buttonDiv">
                     <button id="generate" class="btn"> Copy Password </button>                    
                 </div>
-                <div class="passwordControls">
+                <div id="passwordControls">
                     <div class="sliderControl">
                         <label> Length </label>
                         <input type="range" min="4" max="128" value="4" class="slider" id="range">
