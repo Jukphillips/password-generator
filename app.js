@@ -50,48 +50,55 @@ if( slider.value < 7 ) {
 }
 
 
-// Updates the slider value and calls passwordGenerator function
+// Updates the slider value and calls writePassword function
 slider.oninput = function() {
     output.textContent = this.value;
     changeBackground();
-    passwordGenerator(); 
+    writePassword(); 
 };
 
-function writepassword() {
-
+function writePassword() {
+    let output = passwordGenerator();
+    password.value = output;
 }
    
- 
 function passwordGenerator() {
-    let output = ''
+    let output = '';
+    let getRanChar = (str) => str.charAt(Math.floor(Math.random() * str.length));
     if(!checkChar.checked && !checkNumbers.checked && !checkSpe.checked) {
         alert("Please Select a Character Type for your Password");
     }
 
     if(checkChar.checked){
         userChoices+= lower + upper;
+        output += getRanChar(upper.toString());
+        output += getRanChar(lower.toString())
+        console.log(output)
     };
     if(checkNumbers.checked){
         userChoices+= numeric
+        output += getRanChar(numeric.toString())
     };
     if(checkSpe.checked){
         userChoices+= special
+        output += getRanChar(special.toString())
     }
 
-    for(let i = 0; i < slider.value; i++){
+    for(let i = output.length; i < slider.value; i++){
         output += userChoices.charAt(Math.floor(Math.random() * userChoices.length))
+        output = output.split('').sort(function(){return 0.5-Math.random()}).join('')
     };
 
     return output
 
 }
 
-
 // Have to create an array from the htmlCollection and forEach item in there we create an addeventlistener
 Array.from(checkBoxs).forEach((item) => {
     item.addEventListener('click', writePassword)
 })
 
-refresh.addEventListener('click', wrtiePassword);
+refresh.addEventListener('click', writePassword);
 
 changeBackground();
+writePassword();
