@@ -63,7 +63,7 @@ function writepassword() {
    
  
 function passwordGenerator() {
-    
+    let output = ''
     if(!checkChar.checked && !checkNumbers.checked && !checkSpe.checked) {
         alert("Please Select a Character Type for your Password");
     }
@@ -77,6 +77,12 @@ function passwordGenerator() {
     if(checkSpe.checked){
         userChoices+= special
     }
+
+    for(let i = 0; i < slider.value; i++){
+        output += userChoices.charAt(Math.floor(Math.random() * userChoices.length))
+    };
+
+    return output
 
 }
 
