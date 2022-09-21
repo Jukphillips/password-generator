@@ -16,6 +16,8 @@ let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split();
 let numeric = "1234567890".split();
 let special = "!@#$%^&*()_-[]{}\|;:',./?+=".split()
 
+let userChoices ="";
+
 output.textContent = slider.value // sets default value'
 
 function changeBackground(){
@@ -53,22 +55,27 @@ slider.oninput = function() {
     output.textContent = this.value;
     changeBackground();
     passwordGenerator(); 
+};
+
+function writepassword() {
+
 }
    
-; 
-
-// Test to determine how to determine wether or not a checkbox is checked
-checkChar.oninput = function(){
-    if(checkChar.checked){
-        console.log("here")
-    }
-}
-
-
+ 
 function passwordGenerator() {
-
+    
     if(!checkChar.checked && !checkNumbers.checked && !checkSpe.checked) {
-        alert("Please Select a Character Type for your Password")
+        alert("Please Select a Character Type for your Password");
+    }
+
+    if(checkChar.checked){
+        userChoices+= lower + upper;
+    };
+    if(checkNumbers.checked){
+        userChoices+= numeric
+    };
+    if(checkSpe.checked){
+        userChoices+= special
     }
 
 }
@@ -76,9 +83,9 @@ function passwordGenerator() {
 
 // Have to create an array from the htmlCollection and forEach item in there we create an addeventlistener
 Array.from(checkBoxs).forEach((item) => {
-    item.addEventListener('click', passwordGenerator)
+    item.addEventListener('click', writePassword)
 })
 
-refresh.addEventListener('click', passwordGenerator);
+refresh.addEventListener('click', wrtiePassword);
 
 changeBackground();
