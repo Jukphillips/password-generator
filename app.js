@@ -6,14 +6,15 @@ const checkNumbers = document.getElementById('checkNumbers');
 const checkSpe = document.getElementById('checkSpe');
 const refresh = document.getElementById('refreshBtn');
 const checkBoxs = document.getElementsByClassName('checkBox') // created to contain an HtmlCollection of all checkboxes
+const copyPassBtn = document.getElementById('generate')
 
 // Section of dom elements for changing css
-const card = document.getElementById('card')
+const card = document.getElementById('card') //
 const password = document.getElementById('password')
 const passControls = document.getElementsByClassName('passwordControls')
 
-"Section for character strings to determine password with"
-let lower = "abcdefghijklmnopqrstuvwxyz".split();
+// Section for character strings to determine password with
+let lower = "abcdefghijklmnopqrstuvwxyz".split(); // 
 let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split();
 let numeric = "1234567890".split();
 let special = "!@#$%^&*()_-[]{}\|;:',./?+=".split()
@@ -61,14 +62,24 @@ slider.oninput = function() {
     writePassword(); 
 };
 
+// Places the password generated in passwordGenerator() into dom element to display password
 function writePassword() {
     let output = passwordGenerator();
     password.value = output;
 }
+
+function copyClip() {
+    password.select(); // selects password textarea
+    password.select(0, 99999); // for mobile devices
+
+    navigator.clipboard.writeText(password.value) // connects to clipboard via navigator and writes new password to clipboard
+}
    
 function passwordGenerator() {
     let output = '';
+    // function 
     let getRanChar = (str) => str.charAt(Math.floor(Math.random() * str.length));
+    // requires users to include 
     if(!checkChar.checked && !checkNumbers.checked && !checkSpe.checked) {
         alert("Please Select a Character Type for your Password");
     }
@@ -103,6 +114,8 @@ Array.from(checkBoxs).forEach((item) => {
 })
 
 refresh.addEventListener('click', writePassword);
+
+copyPassBtn.addEventListener('click', copyClip)
 
 changeBackground();
 writePassword();
