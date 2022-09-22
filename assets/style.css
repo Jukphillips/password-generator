@@ -76,7 +76,7 @@ header {
     border-left: 2px solid #cf1b1b; 
     top: 0%;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -15px;
     margin-top: -20px;
     content: '';
     background: #E21C1C;
@@ -91,7 +91,7 @@ header {
     border-left: 2px solid #D29B47;
     top: 0%;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -15px;
     margin-top: -20px;
     content: '';
     background: #f0ad4e;
@@ -106,7 +106,7 @@ header {
     border-left: 2px solid #3DA13D;
     top: 0%;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -15px;
     margin-top: -20px;
     content: '';
     background: #5cb85c;
@@ -136,6 +136,7 @@ header {
     padding: 14px 14px;
     text-align: center;
     cursor: pointer;
+    font-family: 'Amatic';
 }
 
 .btn:hover {
@@ -194,4 +195,18 @@ button[disabled] {
     text-decoration: none;
     background: none;
     border: none;
+}
+
+.labelControl {
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px){
+    #buttonDiv{
+        justify-content: center;
+    }
+
+    .passwordControls {
+        flex-direction: column;
+    }
 }

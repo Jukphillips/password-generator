@@ -7,21 +7,25 @@ const checkSpe = document.getElementById('checkSpe');
 const refresh = document.getElementById('refreshBtn');
 const checkBoxs = document.getElementsByClassName('checkBox') // created to contain an HtmlCollection of all checkboxes
 
+// Section of dom elements for changing css
 const card = document.getElementById('card')
 const password = document.getElementById('password')
 const passControls = document.getElementsByClassName('passwordControls')
 
+"Section for character strings to determine password with"
 let lower = "abcdefghijklmnopqrstuvwxyz".split();
 let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split();
 let numeric = "1234567890".split();
 let special = "!@#$%^&*()_-[]{}\|;:',./?+=".split()
 
+// defines an empty string to place our selected character strings
 let userChoices ="";
 
 output.textContent = slider.value // sets default value'
 
+// function to changes css styling based on slider position
 function changeBackground(){
-if( slider.value < 7 ) {
+if( slider.value < 7 ) { // used to change css styling when slider value is under 7
     card.style.backgroundColor = "#E21C1C";
     password.style.backgroundColor = "#E21C1C";
     passControls[0].style.backgroundColor = "#E21C1C";
@@ -29,7 +33,7 @@ if( slider.value < 7 ) {
     passControls[0].classList.remove('middle', 'end');
     passControls[0].classList.toggle('first')
     card.style.border = "4px solid #cf1b1b";
-} else if ( slider.value < 9 && slider.value >= 7 ){
+} else if ( slider.value < 9 && slider.value >= 7 ){ // used to change slider value when values are in between 7 & 9
     card.style.backgroundColor = "#f0ad4e";
     password.style.backgroundColor = "#f0ad4e";
     passControls[0].style.backgroundColor = "#f0ad4e";
@@ -37,7 +41,7 @@ if( slider.value < 7 ) {
     passControls[0].classList.remove('first', 'end');
     passControls[0].classList.add('middle')
     card.style.border = "4px solid #D29B47";
-} else if (slider.value > 9){
+} else if (slider.value > 9){ // used to change css styling when slider value is above 9
     card.style.backgroundColor = "#5cb85c";
     card.style.border = "4px solid #3DA13D";    
     password.style.backgroundColor = "#5cb85c";
