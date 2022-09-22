@@ -69,9 +69,6 @@ function writePassword() {
 }
 
 function copyClip() {
-    password.select(); // selects password textarea
-    password.select(0, 99999); // for mobile devices
-
     navigator.clipboard.writeText(password.value) // connects to clipboard via navigator and writes new password to clipboard
 }
    
