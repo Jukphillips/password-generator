@@ -98,9 +98,12 @@ function passwordGenerator() {
 
     for(let i = output.length; i < slider.value; i++){
         output += userChoices.charAt(Math.floor(Math.random() * userChoices.length))
-        output = output.split('').sort(function(){return 0.5-Math.random()}).join('')
-    };
+        
 
+
+    };
+    
+    output = output.split('').sort(function(){return 0.5-Math.random()}).join('')
     return output
 
 }

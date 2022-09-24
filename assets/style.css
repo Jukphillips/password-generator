@@ -197,6 +197,20 @@ button[disabled] {
     border: none;
 }
 
+#refreshBtn:active {
+    transform: scale(0.98);
+
+}
+
+.checkBox {
+    height: 17px;
+    width: 16px;
+    background-color: white;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    
+}
 .labelControl {
     margin: 5px;
 }
