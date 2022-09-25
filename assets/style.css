@@ -160,14 +160,21 @@ button[disabled] {
     float: right;
 }
 
-.passwordcontainer {
+.passwordcontainers {
     display: flex;
+    flex-direction: row;
     font-family: 'Amatic';
-    justify-content: space-around;
+    padding: 20px;
+    justify-content: space-between;
     border-bottom: 1px solid black;
 }
 
-
+.passwordcontainer {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    font-size: 2rem;
+}
 
 #password {
     -webkit-appearance: none;
@@ -211,6 +218,20 @@ button[disabled] {
     border-style: solid;
     
 }
+
+#letters {
+    color: black;
+}
+
+#digits {
+    color: white;
+}
+
+#specialChar {
+    color: yellow;
+}
+
+
 .labelControl {
     margin: 5px;
 }
