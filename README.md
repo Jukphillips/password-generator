@@ -15,6 +15,3 @@ HTML, CSS, JAVASCRIPT
 ## Image of Deployed Application
 
 ![Picture of deployed Password Generator](./assets/screenshot.PNG)
-
--make special characters change color
--add javascript comments for code so i can refrence past work
