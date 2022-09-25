@@ -171,6 +171,7 @@ button[disabled] {
 
 .passwordcontainer {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     float: left;
     font-size: 2rem;
